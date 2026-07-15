@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+     <!-- cssme -->
+     <link rel="stylesheet" href="style.css">
+
+     <!-- logo web -->
+     <link rel="Icon" type="images/logo.png" href="images/logo.png">
+
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+
+<!--navbar-->
+<nav class="navbar navbar-expand-lg bg-danger fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="images/logo.png" alt="logo" width="50">
+    </a>
+    <div class="text">
+      <h6 class="fw-bold mx-auto">Perisai Diri Manonjaya</h6>
+      <small class="text-center">Pandai Silat Tanpa Cedra</small>
+    </div>
+    <a href="index.html" class="link-exite">
+         <i class="bi bi-box-arrow-left" href="index.html" style="font-size: 35px;">
+         </i>
+    </a>
+  </div>
+</nav>
+<!--navbar end-->
+
+
+
+    <section class="gallery-section py-5">
+
+        <div class="container" style="padding-top: 5rem;">
+
+            <h1 class="text-center fw-bold">Galeri Kegiatan</h1>
+
+            <p class="text-center text-secondary mb-5">
+                Dokumentasi latihan dan kejuaraan
+            </p>
+
+<!-- carousel -->
+    <div class="slider">
+
+        <button id="prev">❮</button>
+
+        <div class="slide-container">
+
+            <div class="slide active">
+                <img src="images/foto1.jpeg">
+            </div>
+
+            <div class="slide">
+                <img src="images/foto2.jpeg">
+            </div>
+
+            <div class="slide">
+                <img src="images/aftrteknik.jpeg">
+            </div>
+
+            <div class="slide">
+                <img src="images/foto4.jpeg">
+            </div>
+
+            <div class="slide">
+                <img src="images/lat2.jpeg">
+            </div>
+            <div class="slide">
+                <img src="images/kej2.jpeg">
+            </div>
+            <div class="slide">
+                <img src="images/open rec.jpeg">
+            </div>
+            <div class="slide">
+                <img src="images/lat5.jpeg">
+            </div>
+            <div class="slide">
+                <img src="images/keg4.jpeg">
+            </div>
+
+        </div>
+
+        <button id="next">❯</button>
+
+    </div>
+<!-- carousel end -->
+
+            <!-- Tombol Filter -->
+            <button class="btn btn-dark filter-btn active" data-filter="all">
+    <i class="bi bi-grid"></i> Semua
+</button>
+
+<button class="btn btn-outline-dark filter-btn" data-filter="latihan">
+    <i class="fa-solid fa-hand-fist"></i> Latihan
+</button>
+
+<button class="btn btn-outline-dark filter-btn" data-filter="kejuaraan">
+    <i class="fa-solid fa-trophy"></i> Kejuaraan
+</button>
+
+<button class="btn btn-outline-dark filter-btn" data-filter="kegiatan">
+    <i class="bi bi-camera"></i> Kegiatan
+</button>
+
+            <!-- Galeri -->
+
+            <div class="row g-4">
+
+                <div class="col-6 col-lg-3 gallery-item latihan">
+                    <div class="card gallery-card">
+                        <img src="images/lat1.jpeg" class="card-img-top gallery-img">
+                    </div>
+                </div>
+                
+                <div class="col-6 col-lg-3 gallery-item kejuaraan">
+                    <div class="card gallery-card">
+                        <img src="images/kej4.jpeg" class="card-img-top gallery-img">
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-3 gallery-item kegiatan">
+                    <div class="card gallery-card">
+                        <img src="images/foto2.jpeg" class="card-img-top gallery-img">
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 gallery-item latihan">
+                    <div class="card gallery-card">
+                        <img src="images/lat2.jpeg" class="card-img-top gallery-img">
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-3 gallery-item kejuaraan">
+                    <div class="card gallery-card">
+                        <img src="images/kej1.jpeg" class="card-img-top gallery-img">
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-3 gallery-item kegiatan">
+                    <div class="card gallery-card">
+                        <img src="images/keg1.jpeg" class="card-img-top gallery-img">
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 gallery-item latihan">
+                    <div class="card gallery-card">
+                        <img src="images/lat3.jpeg" class="card-img-top gallery-img">
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-3 gallery-item kejuaraan">
+                    <div class="card gallery-card">
+                        <img src="images/kej2.jpeg" class="card-img-top gallery-img">
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-3 gallery-item kegiatan">
+                    <div class="card gallery-card">
+                        <img src="images/fsp (2 of 67).jpg" class="card-img-top gallery-img">
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 gallery-item latihan">
+                    <div class="card gallery-card">
+                        <img src="images/lat4.jpeg" class="card-img-top gallery-img">
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-3 gallery-item kejuaraan">
+                    <div class="card gallery-card">
+                        <img src="images/foto4.jpeg" class="card-img-top gallery-img">
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-3 gallery-item kegiatan">
+                    <div class="card gallery-card">
+                        <img src="images/keg3.jpeg" class="card-img-top gallery-img">
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 gallery-item latihan">
+                    <div class="card gallery-card">
+                        <img src="images/lat5.jpeg" class="card-img-top gallery-img">
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-3 gallery-item kejuaraan">
+                    <div class="card gallery-card">
+                        <img src="images/kej3.jpeg" class="card-img-top gallery-img">
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-3 gallery-item kegiatan">
+                    <div class="card gallery-card">
+                        <img src="images/fsp (37 of 67).jpg" class="card-img-top gallery-img">
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 gallery-item latihan">
+                    <div class="card gallery-card">
+                        <img src="images/lat6.jpeg" class="card-img-top gallery-img">
+                    </div>
+                </div>
+
+
+                <div class="col-6 col-lg-3 gallery-item kegiatan">
+                    <div class="card gallery-card">
+                        <img src="images/keg2.jpeg" class="card-img-top gallery-img">
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 gallery-item kegiatan">
+                    <div class="card gallery-card">
+                        <img src="images/fsp (23 of 67).jpg" class="card-img-top gallery-img">
+                    </div>
+                </div>
+
+        </div>
+
+    </section>
+
+    <!-- Lightbox -->
+
+    <div id="lightbox">
+
+        <span id="close-btn">
+            <i class="bi bi-x-lg"></i>
+        </span>
+
+        <img id="lightbox-img">
+
+    </div>
+<!-- dark mode end -->
+    <script src="script.js"></script>
+</body>
+</html>
