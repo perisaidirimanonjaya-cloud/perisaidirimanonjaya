@@ -22,6 +22,27 @@
      <!-- iconbtstrap -->
       <link rel="stylesheet"
 href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<!-- Loading Overlay -->
+<div id="loadingOverlay">
+
+    <div class="loading-box">
+
+        <!-- Ganti src sesuai lokasi logo -->
+        <img src="images/logo.png" alt="Logo" class="loading-logo">
+
+        <div class="spinner"></div>
+
+        <h3 id="loadingTitle">Mengirim Data Pendaftaran</h3>
+
+        <p id="loadingMessage">
+            Mohon tunggu beberapa saat...
+        </p>
+
+    </div>
+
+  
+</div>
   </head>
   <body>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -29,8 +50,6 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
 <script>
     AOS.init();
 </script>
-  </body>
-</html>
 <!--navbar-->
 <nav class="navbar navbar-expand-lg bg-danger fixed-top">
   <div class="container">
@@ -75,14 +94,36 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label">
-                            Sekolah Asal
-                        </label>
+    <label for="jenjang" class="form-label">
+        Jenjang Pendidikan *
+    </label>
 
-                        <input type="text"
-                               class="form-control"
-                               id="sekolah"
-                               required>
+    <select id="jenjang" name="jenjang" class="form-select" required>
+        <option value="" selected disabled>
+            Pilih jenjang pendidikan
+        </option>
+
+        <option value="SD">SD</option>
+        <option value="SMP">SMP</option>
+        <option value="SMA">SMA</option>
+        <option value="SMK">SMK</option>
+        <option value="Mahasiswa">Mahasiswa</option>
+        <option value="Umum">Umum</option>
+    </select>
+</div>
+
+<div class="mb-3">
+    <label for="sekolah" class="form-label">
+        Sekolah *
+    </label>
+
+    <select id="sekolah" name="sekolah" class="form-select" required>
+        <option value="" selected disabled>
+            Pilih sekolah
+        </option>
+    </select>
+</div>
+
                     </div>
 
                     <div class="mb-3">
@@ -96,19 +137,18 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
                                required>
                     </div>
 
-                    <div class="row">
+                   <div class="mb-3">
+                        <label class="form-label">
+                            Tempat Lahir
+                        </label>
 
-                        <div class="col-md-6 mb-3">
-                            <label class="form-label">
-                                Tempat Lahir
-                            </label>
+                        <input type="tel"
+                               class="form-control"
+                               id="tempatLahir"
+                               required>
+                    </div>
 
-                            <input type="text"
-                                   class="form-control"
-                                   id="tempatLahir"
-                                   required>
-                        </div>
-
+                    <div>
                         <div class="col-md-6 mb-3">
                             <label class="form-label">
                                 Tanggal Lahir
@@ -191,51 +231,184 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
  <script>
 const scriptURL = "https://script.google.com/macros/s/AKfycbwWwrJSxcymnkMaiVGfDPyq836JYU7Oc3sNi9-CyxyEZw8XCjZjqbwVayqVdYAMzkRM3w/exec";
 
+// ===============================
+// Loading
+// ===============================
+
+const overlay = document.getElementById("loadingOverlay");
+
+function showLoading() {
+    overlay.classList.add("show");
+
+    document.querySelector(".spinner").style.display = "block";
+
+    document.getElementById("loadingTitle").innerHTML =
+        "Mengirim Data Pendaftaran";
+
+    document.getElementById("loadingMessage").innerHTML =
+        "Mohon tunggu beberapa saat...";
+}
+
+function showSuccess() {
+
+    document.querySelector(".spinner").style.display = "none";
+
+    document.getElementById("loadingTitle").innerHTML =
+        '<div class="success-check">✔</div>';
+
+    document.getElementById("loadingMessage").innerHTML =
+        "<b>Pendaftaran Berhasil</b><br>Terima kasih telah mendaftar.";
+
+    document.getElementById("formPendaftaran").reset();
+
+    setTimeout(() => {
+
+        overlay.classList.remove("show");
+
+        document.querySelector(".spinner").style.display = "block";
+
+    }, 2000);
+
+}
+
+function showError(pesan = "Terjadi kesalahan.") {
+
+    document.querySelector(".spinner").style.display = "none";
+
+    document.getElementById("loadingTitle").innerHTML =
+        '<div id="errorIcon">✖</div>';
+
+    document.getElementById("loadingMessage").innerHTML =
+        "<b>" + pesan + "</b>";
+
+    setTimeout(() => {
+
+        overlay.classList.remove("show");
+
+        document.querySelector(".spinner").style.display = "block";
+
+    }, 2500);
+
+}
+
+// ===============================
+// Form Submit
+// ===============================
+
 document
-    .getElementById("formPendaftaran")
-    .addEventListener("submit", function (e) {
+.getElementById("formPendaftaran")
+.addEventListener("submit", function(e){
 
-        e.preventDefault();
+    e.preventDefault();
 
-        const data = {
-    nama: document.getElementById("nama").value,
-    sekolah: document.getElementById("sekolah").value,
-    umur: document.getElementById("umur").value,
-    tempatLahir: document.getElementById("tempatLahir").value,
-    tanggalLahir: document.getElementById("tanggalLahir").value,
-    whatsapp: document.getElementById("whatsapp").value,
-    alamat: document.getElementById("alamat").value,
-    email: document.getElementById("email").value
-};
-        fetch(scriptURL, {
-    method: "POST",
-    body: JSON.stringify(data)
-})
-.then(response => response.json())
-.then(result => {
+    const data = {
 
-    if (result.status === "gagal") {
+        nama: document.getElementById("nama").value,
+        sekolah: document.getElementById("sekolah").value,
+        jenjang: document.getElementById("jenjang").value,
+        umur: document.getElementById("umur").value,
+        tempatLahir: document.getElementById("tempatLahir").value,
+        tanggalLahir: document.getElementById("tanggalLahir").value,
+        whatsapp: document.getElementById("whatsapp").value,
+        alamat: document.getElementById("alamat").value,
+        email: document.getElementById("email").value
 
-        alert("Gagal mendaftar! Email sudah terdaftar.");
+    };
 
-    } else {
+    // Tampilkan loading
+    showLoading();
 
-        alert("Pendaftaran berhasil dikirim!");
-        document.getElementById("formPendaftaran").reset();
+    fetch(scriptURL, {
 
-    }
+        method: "POST",
+        body: JSON.stringify(data)
 
-})
-.catch((error) => {
+    })
 
-    alert("Terjadi kesalahan.");
-    console.log(error);
+    .then(response => response.json())
+
+    .then(result => {
+
+        if(result.status === "gagal"){
+
+            showError("Email sudah terdaftar.");
+
+        }else{
+
+            showSuccess();
+
+        }
+
+    })
+
+    .catch(error => {
+
+        console.log(error);
+
+        showError("Terjadi kesalahan pada server.");
+
+    });
 
 });
 
-});
+    const dataSekolah = {
+
+        SD: [
+            "SDN 1 Manonjaya",
+            "SDN 2 Manonjaya",
+            "SDN 3 Manonjaya",
+            "SDN 4 Manonjaya",
+            "SDN 5 Manonjaya",
+            "SDN 1 Cibeber"
+        ],
+
+        SMP: [
+            "SMPN 1 Manonjaya",
+            "SMPN 2 Manonjaya"
+        ],
+
+        SMA: [
+            "SMAN 1 Manonjaya"
+        ],
+
+        SMK: [
+            "SMKN Manonjaya"
+        ],
+
+        Mahasiswa: [
+            "Universitas Siliwangi",
+            "Universitas Galuh"
+        ],
+
+        Umum: [
+            "Lainnya"
+        ]
+    };
+
+    const jenjang = document.getElementById("jenjang");
+    const sekolah = document.getElementById("sekolah");
+
+    jenjang.addEventListener("change", function () {
+
+        sekolah.innerHTML =
+            '<option value="" selected disabled>Pilih sekolah</option>';
+
+        const daftarSekolah = dataSekolah[this.value];
+
+        daftarSekolah.forEach(function (namaSekolah) {
+
+            const option = document.createElement("option");
+
+            option.value = namaSekolah;
+            option.textContent = namaSekolah;
+
+            sekolah.appendChild(option);
+        });
+    });
+</script>
 
 </script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
