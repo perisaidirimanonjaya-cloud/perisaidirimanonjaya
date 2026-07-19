@@ -7,12 +7,14 @@
     <!-- cssbs -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-    <!-- logo web -->
-     <link rel="Icon" type="images/logo.png" href="images/logo.png">
+    <!-- icons -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    
-    <!-- cssme -->
+     <!-- cssme -->
      <link rel="stylesheet" href="style.css">
+
+     <!-- logo web -->
+     <link rel="Icon" type="images/logo.png" href="images/logo.png">
 
      <!-- animasi -->
      <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
@@ -20,6 +22,27 @@
      <!-- iconbtstrap -->
       <link rel="stylesheet"
 href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<!-- Loading Overlay -->
+<div id="loadingOverlay">
+
+    <div class="loading-box">
+
+        <!-- Ganti src sesuai lokasi logo -->
+        <img src="images/logo.png" alt="Logo" class="loading-logo">
+
+        <div class="spinner"></div>
+
+        <h3 id="loadingTitle">Mengirim Data Pendaftaran</h3>
+
+        <p id="loadingMessage">
+            Mohon tunggu beberapa saat...
+        </p>
+
+    </div>
+
+  
+</div>
   </head>
   <body>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -27,8 +50,6 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
 <script>
     AOS.init();
 </script>
-  </body>
-</html>
 <!--navbar-->
 <nav class="navbar navbar-expand-lg bg-danger fixed-top">
   <div class="container">
@@ -39,282 +60,161 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
       <h6 class="fw-bold mx-auto">Perisai Diri Manonjaya</h6>
       <small class="text-center">Pandai Silat Tanpa Cedra</small>
     </div>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.html">Beranda</a>
-        </li>
-       <li class="nav-item">
-          <a class="nav-link active"  aria-current="page"href="#tentang">Tentang</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active"  aria-current="page"href="#galeri">Galeri</a>
-       <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#jadwal">jadwal</a>
-       <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="pendaftaran.html">Pendaftaran</a>
-        </li>
-        </li>
-    </div>
+    <a href="index.html" class="link-exite">
+         <i class="bi bi-box-arrow-left" href="index.html" style="font-size: 35px;">
+         </i>
+    </a>
   </div>
 </nav>
 <!--navbar end-->
 
-<!-- beranda -->
+<!-- pendaftaran -->
+<section id="pendaftaran" class="py-5 bg-light" style="margin-top: 80px;">
+    <div class="container">
 
-<!-- sejarah singkat -->
-<section id="Sejarah" class="container-fluid mt-5 px-5" >
-    <div class="row text-center">
-        <div class="col">
-            <h2>Sejarah Singkat</h2>
-            <hr>
-        </div>
-    </div>
+        <h2 class="text-center mb-4">
+            Pendaftaran Anggota Baru PERISAI DIRI
+        </h2>
 
-    <div class="container text-center">
-        <div class="row">
-            <div class="col">
-            <img src="images/pndiri pd.jpg" class="img-fluid rounded" alt="Perisai Diri">
-        </div>
-            </div>
-        <div class="col" style="padding-top: 2rem;">
-            <p>Keluarga Silat Nasional Indonesia Perisai Diri atau disingkat Kelatnas Indonesia Perisai Diri[1] adalah organisasi olahraga beladiri yang didirikan oleh R.M. Soebandiman Dirdjoatmodjo bersama Mas Basofi Soedirman pada tanggal 2 Juli 1955 di Surabaya, Jawa Timur.</p>
-            <p>R.M. Soebandiman Dirdjoatmodjo lahir di Yogyakarta pada tanggal 8 Januari 1913 di lingkungan pura Pakualaman. Dia adalah putra pertama dari R.M. Pakoe Soedirdjo, buyut dari Sri Paduka Paku Alam II. Sejak berusia 9 tahun dia telah dapat menguasai ilmu pencak silat yang ada di lingkungan keraton sehingga mendapat kepercayaan untuk melatih teman-temannya di lingkungan Pakualaman. Di samping pencak silat dia juga belajar menari di istana Pakualaman sehingga berteman dengan Wasi dan Bagong Kussudiardja.</p>
-    </div>
-    </div>
-</section>
-<!-- sejarah singkat end -->
+        <div class="row justify-content-center">
 
-<!-- Tentang Kami -->
-<section id="tentang" class="container-fluid mt-5 px-5" style="padding-top: 5rem;">
-    <div class="row text-center">
-        <div class="col">
-            <h2>Tentang Kami</h2>
-            <hr>
-        </div>
-    </div>
+            <div class="col-md-8">
 
-    <div class="row mt-3">
-        <div class="col-md-6" data-aos="fade-right" data-aos-duration="5000">
-            <img src="images/foto1.jpeg" class="img-fluid rounded" alt="Perisai Diri">
-        </div>
+                <form id="formPendaftaran">
 
-        <div class="col-md-6" data-aos="fade-left" data-aos-duration="50000">
-            <h4>Perisai Diri Manonjaya</h4>
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Nama Lengkap
+                        </label>
 
-            <p>
-                Perisai Diri Manonjaya merupakan salah satu cabang
-                perguruan silat Perisai Diri yang berfokus pada
-                pembinaan karakter, kedisiplinan, dan kemampuan bela diri.
-            </p>
+                        <input type="text"
+                               class="form-control"
+                               id="nama"
+                               required>
+                    </div>
 
-            <p>
-                Dengan moto <b>"Pandai Silat Tanpa Cedera"</b>,
-                kami berkomitmen untuk mengembangkan kemampuan fisik,
-                mental, dan sportivitas para anggota.
-            </p>
-        </div>
-    </div>
-</section>
-</section>
+                    <div class="mb-3">
+    <label for="jenjang" class="form-label">
+        Jenjang Pendidikan
+    </label>
 
-<!-- Petinggi -->
-<section id="petinggi" class="container mt-5">
+    <select id="jenjang" name="jenjang" class="form-select" required>
+        <option value="" selected disabled>
+            Pilih jenjang pendidikan
+        </option>
 
-    <div class="row justify-content-center text-center">
-
-         <!-- ketua cabang -->
-        <div class="col-md-4 mb-4" data-aos="fade-right" data-aos-duration="1000">
-
-            <div class="card shadow border-0 p-4">
-
-                <img src="images/ketu Cabang.png"
-                     alt="Pembina"
-                     class="img-thumbnail mx-auto"
-                     width="200">
-
-                <h2 class="fw-semibold fs-4 mt-3">
-                    Ahmad Sofyan Haris,S.Pd.,S.Kom
-                </h2>
-
-                <p class="text-secondary">
-                    Ketua Perisai Diri Cabang Tasikmalaya
-                </p>
-
-            </div>
-
-        </div>
-
-        <!-- Pembina -->
-        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000">
-
-            <div class="card shadow border-0 p-4">
-
-                <img src="images/pembina.jpeg"
-                     alt="Pembina"
-                     class="img-thumbnail mx-auto"
-                     width="200">
-
-                <h2 class="fw-semibold fs-4 mt-3">
-                    Uus Sugihartono S.Pd, M.Pd
-                </h2>
-
-                <p class="text-secondary">
-                    Pembina SMK Manonjaya
-                </p>
-
-            </div>
-
-        </div>
-
-       
-        <!-- Pelatih -->
-        <div class="col-md-4 mb-4" data-aos="fade-left" data-aos-duration="1000">
-
-            <div class="card shadow border-0 p-4">
-
-                <img src="images/pp.png"
-                     alt="Pelatih"
-                     class="img-thumbnail mx-auto"
-                     width="200">
-
-                <h2 class="fw-semibold fs-4 mt-3">
-                    Risma Triawati S. Pd, Gr
-                </h2>
-
-                <p class="text-secondary">
-                    Pelatih Cabang Manonjaya
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<!-- petinggi end -->
-<!--Tentang end-->
-<!-- beranda end -->
-
-<!-- Galeri -->
-<section id="galeri" class="container mt-5" style="padding-top: 5rem;">
-    <div class="row text-center mb-4" data-aos="flip-left">
-        <div class="col">
-            <h2>Galeri</h2>
-            <p>Dokumentasi latihan dan kejuaraan Perisai Diri Manonjaya</p>
-        </div>
-    </div>
-
-    <div class="row">
-
-        <div class="col-md-4 mb-4">
-            <div class="card shadow" data-aos="zoom-in" data-aos-duration="1500">
-                <img src="images/foto3.jpeg" class="card-img-top" alt="Latihan">
-                <div class="card-body text-center">
-                    <h5>Latihan Rutin</h5>
-                    <p>Kegiatan latihan bersama anggota.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4 mb-4">
-            <div class="card shadow" data-aos="zoom-in" data-aos-duration="1500">
-                <img src="images/tekni3k.jpeg" class="card-img-top" alt="Latihan">
-                <div class="card-body text-center">
-                    <h5>Latihan Teknik</h5>
-                    <p>Pembelajaran teknik bela diri.</p>
-                </div>
-            </div>
-        </div>
- 
-        <div class="col-md-4">
-            <div class="card shadow" data-aos="zoom-in" data-aos-duration="1500">
-                <img src="images/foto4.jpeg" class="card-img-top" alt="Kejuaraan">
-                <div class="card-body text-center">
-                    <h5>Kejuaraan</h5>
-                    <p>Prestasi dan pertandingan.</p>
-                </div>
-            </div>
-        </div>
-            <div class="text-center" style="margin-top: 5rem;">
-                 <a href="galeri.html#Kejuaran">
-                    <button type="button" class="btn btn-light btn-animasi fw-bold">Lihat Semua</button>
-                </a>
-            </div>
-    </div>
-</section>
-<!-- galeri end -->
-
-<!-- open recruitment -->
-<div class="container text-center" data-aos="zoom-in" data-aos-duration="2000">
-        <div class="row">
-            <div class="col">
-            <img src="images/open rec.png" class="img-fluid rounded" alt="Perisai Diri"
-             class="img-thumbnail mx-auto"
-                     width="350" style="padding-top: 3rem;">
-        </div>
-        </div>
-
-        <!-- btn daftar -->
- 
- <!-- btn daftar end -->
-<div class="daftar-wrapper">
-    <span class="petunjuk kiri">👉</span>
-
-    <a href="pendaftaran.html" class="btn-daftar">Daftar Sekarang</a>
-
-    <span class="petunjuk kanan">👈</span>
+        <option value="SD">SD</option>
+        <option value="SMP">SMP</option>
+        <option value="SMA">SMA</option>
+        <option value="SMK">SMK</option>
+        <option value="Mahasiswa">Mahasiswa</option>
+        <option value="Umum">Umum</option>
+    </select>
 </div>
 
+<div class="mb-3">
+    <label for="sekolah" class="form-label">
+        Sekolah
+    </label>
 
-<!-- Jadwal Latihan -->
-<section id="jadwal" style="padding-top: 5rem;">
-    <div class="row text-center mb-4">
-        <div class="col" data-aos="zoom-in">
-            <h2>Jadwal Latihan</h2>
-            <p>Jadwal latihan Perisai Diri Manonjaya</p>
-        </div>
-    </div>
+    <select id="sekolah" name="sekolah" class="form-select" required>
+        <option value="" selected disabled>
+            Pilih sekolah
+        </option>
+    </select>
+</div>
 
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+<select id="kelas" name="kelas" class="form-select" required>
+    <option value="" selected disabled>Pilih kelas</option>
+</select>
 
-            <table class="table table-bordered table-striped text-center">
-                <thead class="table-danger" data-aos="fade-right">
-                    <tr>
-                        <th>Hari</th>
-                        <th>Waktu</th>
-                        <th>Tempat</th>
-                    </tr>
-                </thead>
 
-                <tbody data-aos="fade-left">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Umur
+                        </label>
+
+                        <input type="number"
+                               class="form-control"
+                               id="umur"
+                               required>
+                    </div>
+
+                   <div class="mb-3">
+                        <label class="form-label">
+                            Tempat Lahir
+                        </label>
+
+                        <input type="tel"
+                               class="form-control"
+                               id="tempatLahir"
+                               required>
+                    </div>
+
+                    <div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">
+                                Tanggal Lahir
+                            </label>
+
+                            <input type="date"
+                                   class="form-control"
+                                   id="tanggalLahir"
+                                   required>
+                        </div>
+
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Nomor WhatsApp
+                        </label>
+
+                        <input type="tel"
+                               class="form-control"
+                               id="whatsapp"
+                               placeholder="08xxxxxxxxxx"
+                               pattern="08[0-9]{8,12}"
+                               title="Nomor harus diawali 08 dan terdiri dari 10-14 digit"
+                               required>
+
+                               <small class="text-muted">
+                                contoh: 081234567890
+                               </small>
+                    </div>
                     
-                    <tr>
-                        <td>Kamis</td>
-                        <td>15.00 - selesai</td>
-                        <td>RO SMKN MANONJAYA</td>
-                    </tr>
+                    <div class="mb-3">
+    <label class="form-label">Email</label>
+    <input type="email" class="form-control" id="email" required>
+</div>
 
-                    <tr>
-                        <td>Sabtu</td>
-                        <td>14.00 - selesai</td>
-                        <td>RO SMKN MANONJAYA</td>
-                    </tr>
-                </tbody>
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Alamat
+                        </label>
 
-            </table>
+                        <textarea class="form-control"
+                                  id="alamat"
+                                  rows="3"
+                                  required></textarea>
+                    </div>
+
+                    <button type="submit"
+                            class="btn btn-danger w-100">
+                        Daftar Sekarang
+                    </button>
+
+                </form>
+
+            </div>
 
         </div>
+
     </div>
 </section>
-
-<!-- jadwal end -->
-
+<!-- pendaftaran end -->
 
 <!-- Footer -->
 <footer class="bg-dark text-white text-center py-4">
@@ -335,11 +235,278 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
         </p>
     </div>
 </footer>
-<!-- end footer -->
- 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<!-- end footer --> 
 
-<script src="script.js"></script>
+
+
+ <script>
+const scriptURL = "https://script.google.com/macros/s/AKfycbwWwrJSxcymnkMaiVGfDPyq836JYU7Oc3sNi9-CyxyEZw8XCjZjqbwVayqVdYAMzkRM3w/exec";
+
+
+
+
+
+// ===============================
+// Loading
+// ===============================
+
+const overlay = document.getElementById("loadingOverlay");
+
+function showLoading() {
+    overlay.classList.add("show");
+
+    document.querySelector(".spinner").style.display = "block";
+
+    document.getElementById("loadingTitle").innerHTML =
+        "Mengirim Data Pendaftaran";
+
+    document.getElementById("loadingMessage").innerHTML =
+        "Mohon tunggu beberapa saat...";
+}
+
+function showSuccess() {
+
+    document.querySelector(".spinner").style.display = "none";
+
+    document.getElementById("loadingTitle").innerHTML =
+        '<div class="success-check">✔</div>';
+
+    document.getElementById("loadingMessage").innerHTML =
+        "<b>Pendaftaran Berhasil</b><br>Terima kasih telah mendaftar.";
+
+    document.getElementById("formPendaftaran").reset();
+
+    setTimeout(() => {
+
+        overlay.classList.remove("show");
+
+        document.querySelector(".spinner").style.display = "block";
+
+    }, 2000);
+
+}
+
+function showError(pesan = "Terjadi kesalahan.") {
+
+    document.querySelector(".spinner").style.display = "none";
+
+    document.getElementById("loadingTitle").innerHTML =
+        '<div id="errorIcon">✖</div>';
+
+    document.getElementById("loadingMessage").innerHTML =
+        "<b>" + pesan + "</b>";
+
+    setTimeout(() => {
+
+        overlay.classList.remove("show");
+
+        document.querySelector(".spinner").style.display = "block";
+
+    }, 2500);
+
+}
+
+// ===============================
+// Form Submit
+// ===============================
+
+document
+.getElementById("formPendaftaran")
+.addEventListener("submit", function(e){
+
+    e.preventDefault();
+    const nomor = document.getElementById("whatsapp").value;
+
+    if (!/^08\d{8,12}$/.test(nomor)) {
+
+    showError(
+        "Nomor WhatsApp harus diawali 08 dan terdiri dari 10–14 digit."
+    );
+
+    return;
+
+    const email = document.getElementById("email").value;
+
+const polaEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+if (!polaEmail.test(email)) {
+
+    showError("Masukkan email yang valid.");
+
+    return;
+}
+}
+
+    const data = {
+
+        nama: document.getElementById("nama").value,
+        sekolah: document.getElementById("sekolah").value,
+        jenjang: document.getElementById("jenjang").value,
+        kelas: document.getElementById("kelas").value,
+        umur: document.getElementById("umur").value,
+        tempatLahir: document.getElementById("tempatLahir").value,
+        tanggalLahir: document.getElementById("tanggalLahir").value,
+        whatsapp: document.getElementById("whatsapp").value,
+        alamat: document.getElementById("alamat").value,
+        email: document.getElementById("email").value
+
+    };
+
+    // Tampilkan loading
+    showLoading();
+
+    fetch(scriptURL, {
+
+        method: "POST",
+        body: JSON.stringify(data)
+
+    })
+
+    .then(response => response.json())
+
+    .then(result => {
+
+        if(result.status === "gagal"){
+
+            showError("Email sudah terdaftar.");
+
+        }else{
+
+            showSuccess();
+
+        }
+
+    })
+
+    .catch(error => {
+
+        console.log(error);
+
+        showError("Terjadi kesalahan pada server.");
+
+    });
+
+});
+
+    const dataSekolah = {
+
+        SD: [
+            "SDN 1 Manonjaya",
+            "SDN 2 Manonjaya",
+            "SDN 3 Manonjaya",
+            "SDN 4 Manonjaya",
+            "SDN 5 Manonjaya",
+            "SDN 1 Cibeber"
+        ],
+
+        SMP: [
+            "SMPN 1 Manonjaya",
+            "SMPN 2 Manonjaya"
+        ],
+
+        SMA: [
+            "SMAN 1 Manonjaya"
+        ],
+
+        SMK: [
+            "SMKN Manonjaya"
+        ],
+
+        Mahasiswa: [
+            "Universitas Siliwangi",
+            "Universitas Galuh"
+        ],
+
+        Umum: [
+            "Lainnya"
+        ]
+    };
+
+    const dataKelas = {
+        SD: ["1A", "1B", "1C", "2A", "2B", "2C", "3A", "3B", "3C", "4A", "4B", "4C", "5A", "5B", "5C", "6A", "6B", "6C", ],
+        SMP: ["7A", "7B", "7C", "7E", "7F", "7G", "7H", "7I", "7J", "7K", "8A", "8B", "8C", "8E", "8F", "8G", "8H", "8I", "8J", "8K", "9A", "9B", "9C", "9E", "9F", "9G", "9H", "9I", "9J", "9K", ],
+
+        SMK: [
+
+    "10 RPL ACP", "10 RPL REGULER", "10 TKR 1", "10 TKR 2", "10 TKR 3",
+    "10 TKJ 1", "10 TKJ 2", "10 TKJ 3", "10 TKJ 4",
+    "10 TSM 1", "10 TSM 2", "10 TSM 3", "10 MP 1", "10 MP 2", "10 MP 3", "10 MP 4",
+
+    "11 RPL ACP", "11 RPL REGULER", "11 TKR 1", "11 TKR 2", "11 TKR 3",
+    "11 TKJ 1", "11 TKJ 2", "11 TKJ 3", "11 TKJ 4",
+    "11 TSM 1", "11 TSM 2", "11 TSM 3", "11 MP 1", "11 MP 2", "11 MP 3", "11 MP 4",
+
+    "12 RPL ACP", "12 RPL REGULER", "12 TKR 1", "12 TKR 2", "12 TKR 3",
+    "12 TKJ 1", "12 TKJ 2", "12 TKJ 3", "12 TKJ 4",
+    "12 TSM 1", "12 TSM 2", "12 TSM 3", "12 MP 1", "12 MP 2", "12 MP 3", "12 MP 4"
+
+],
+       SMA: [
+
+    // Kelas 10
+    "10-1", "10-2", "10-3", "10-4", "10-5",
+    "10-6", "10-7", "10-8", "10-9", "10-10",
+
+    // Kelas 11 IPA
+    "11 IPA 1", "11 IPA 2", "11 IPA 3", "11 IPA 4", "11 IPA 5",
+
+    // Kelas 11 IPS
+    "11 IPS 1", "11 IPS 2", "11 IPS 3", "11 IPS 4", "11 IPS 5",
+
+    // Kelas 12 IPA
+    "12 IPA 1", "12 IPA 2", "12 IPA 3", "12 IPA 4", "12 IPA 5",
+
+    // Kelas 12 IPS
+    "12 IPS 1", "12 IPS 2", "12 IPS 3", "12 IPS 4", "12 IPS 5"
+
+]
+    };
+
+    const kelas = document.getElementById("kelas")
+
+    const jenjang = document.getElementById("jenjang");
+    const sekolah = document.getElementById("sekolah");
+
+    jenjang.addEventListener("change", function () {
+
+    sekolah.innerHTML =
+        '<option value="" selected disabled>Pilih sekolah</option>';
+
+    kelas.innerHTML =
+        '<option value="" selected disabled>Pilih kelas</option>';
+
+    const daftarSekolah = dataSekolah[this.value];
+
+    daftarSekolah.forEach(function (namaSekolah) {
+
+        const option = document.createElement("option");
+
+        option.value = namaSekolah;
+        option.textContent = namaSekolah;
+
+        sekolah.appendChild(option);
+    });
+
+    const daftarKelas = dataKelas[this.value];
+
+    if (daftarKelas) {
+
+        daftarKelas.forEach(function (namaKelas) {
+
+            const option = document.createElement("option");
+
+            option.value = namaKelas;
+            option.textContent = "Kelas " + namaKelas;
+
+            kelas.appendChild(option);
+        });
+    }
+});
+</script>
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
 </html>
